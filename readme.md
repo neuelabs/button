@@ -3,7 +3,7 @@
 ## Install
 
 ```bash
-yarn add neuelabs-button
+yarn add @neuelabs/button
 ```
 
 ## Usage
@@ -11,7 +11,7 @@ yarn add neuelabs-button
 ```js
 'use strict'
 
-import Button from 'neuelabs-button'
+import Button from '@neuelabs/button'
 
 const Component = () => (
 	<div>
