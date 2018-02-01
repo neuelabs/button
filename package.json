@@ -1,6 +1,6 @@
 {
 	"name": "neuelabs-button",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": " neuelabs react button component",
 	"main": "./dist/index.js",
 	"repository": "https://github.com/neuelabs/button.git",
