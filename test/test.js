@@ -69,3 +69,10 @@ test('Button click component', t => {
 		.toJSON()
 	t.snapshot(tree)
 })
+
+test('Button custom style component', t => {
+	const tree = render
+		.create(<Button styles={{ borderRadius: '4px' }}>Custom style</Button>)
+		.toJSON()
+	t.snapshot(tree)
+})

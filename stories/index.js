@@ -114,3 +114,10 @@ storiesOf('Button', module)
 			</div>
 		</section>
 	))
+	.add('custom styles', () => (
+		<section>
+			<div>
+				<Button styles={{ borderRadius: '4px' }}>custom styles</Button>
+			</div>
+		</section>
+	))

@@ -2,17 +2,27 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import classNames from 'classnames'
+import classnames from 'classnames'
 
-const Button = ({ children, color, size, block, type, onClick, disabled }) => {
-	const styles = classNames(color, size, { block }, { disabled })
+const Button = ({
+	children,
+	color,
+	size,
+	block,
+	type,
+	onClick,
+	disabled,
+	styles
+}) => {
+	const classNames = classnames(color, size, { block }, { disabled })
 
 	return (
 		<button
-			className={styles}
+			className={classNames}
 			type={type}
 			onClick={onClick}
 			disabled={disabled}
+			style={styles}
 		>
 			{children}
 
@@ -80,7 +90,8 @@ Button.propTypes = {
 	block: PropTypes.bool,
 	type: PropTypes.oneOf(['button', 'submit']),
 	onClick: PropTypes.func,
-	disabled: PropTypes.bool
+	disabled: PropTypes.bool,
+	styles: PropTypes.object
 }
 
 Button.defaultProps = {
