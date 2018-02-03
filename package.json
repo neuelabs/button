@@ -35,6 +35,7 @@
 	},
 	"devDependencies": {
 		"@ava/babel-preset-stage-4": "^1.1.0",
+		"@storybook/addon-a11y": "^3.3.12",
 		"@storybook/addon-actions": "^3.3.11",
 		"@storybook/react": "^3.3.11",
 		"ava": "^0.25.0",

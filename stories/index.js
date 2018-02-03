@@ -3,11 +3,13 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
+import { checkA11y } from '@storybook/addon-a11y'
 
 import Button from './../'
 import styles from './styles.css' // eslint-disable-line no-unused-vars
 
 storiesOf('Button', module)
+	.addDecorator(checkA11y)
 	.add('colors', () => (
 		<section>
 			<div>
