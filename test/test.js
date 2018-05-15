@@ -20,8 +20,8 @@ test('Button small component', t => {
 	t.snapshot(tree)
 })
 
-test('Button medium component', t => {
-	const tree = render.create(<Button size="medium">Medium</Button>).toJSON()
+test('Button default component', t => {
+	const tree = render.create(<Button>Default</Button>).toJSON()
 	t.snapshot(tree)
 })
 

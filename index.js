@@ -8,13 +8,20 @@ const Button = ({
 	children,
 	color,
 	size,
+	radius,
 	block,
 	type,
 	onClick,
 	disabled,
 	styles
 }) => {
-	const classNames = classnames(color, size, { block }, { disabled })
+	const classNames = classnames(
+		color,
+		size,
+		{ radius },
+		{ block },
+		{ disabled }
+	)
 
 	return (
 		<button
@@ -28,19 +35,22 @@ const Button = ({
 
 			<style jsx>{`
 				button {
-					background-color: transparent;
-					border: none;
-					font-weight: 500;
-					cursor: pointer;
-					text-transform: uppercase;
+					font-size: 14px;
+					font-weight: 600;
 					letter-spacing: 2px;
+					line-height: 20px;
+					background-color: transparent;
+					border: 1px solid transparent;
+					padding: 8px 16px;
 					outline: none;
 					display: inline-block;
+					cursor: pointer;
 				}
 
 				.dark {
-					background-color: #000;
+					background-color: #111;
 					color: #fff;
+					border-color: #111;
 				}
 
 				.light {
@@ -49,24 +59,15 @@ const Button = ({
 				}
 
 				.small {
-					font-size: 8px;
-					height: 30px;
-					padding-left: 30px;
-					padding-right: 30px;
-				}
-
-				.medium {
-					font-size: 10px;
-					height: 40px;
-					padding-left: 40px;
-					padding-right: 40px;
+					padding: 7px 12px;
 				}
 
 				.large {
-					font-size: 14px;
-					height: 50px;
-					padding-left: 50px;
-					padding-right: 50px;
+					padding: 12px 24px;
+				}
+
+				.radius {
+					border-radius: 3px;
 				}
 
 				.block {
@@ -86,8 +87,9 @@ const Button = ({
 Button.propTypes = {
 	children: PropTypes.node.isRequired,
 	color: PropTypes.oneOf(['dark', 'light']),
-	size: PropTypes.oneOf(['small', 'medium', 'large']),
+	size: PropTypes.oneOf(['small', 'large']),
 	block: PropTypes.bool,
+	radius: PropTypes.bool,
 	type: PropTypes.oneOf(['button', 'submit']),
 	onClick: PropTypes.func,
 	disabled: PropTypes.bool,
@@ -96,8 +98,8 @@ Button.propTypes = {
 
 Button.defaultProps = {
 	color: 'dark',
-	size: 'medium',
 	block: false,
+	radius: false,
 	type: 'button',
 	disabled: false
 }
